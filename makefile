@@ -8,7 +8,7 @@ all: Program
 Program: $(OBJECTS_MAIN) 
 	$(CC) $(FLAGS) -o Program $(OBJECTS_MAIN) 
 
-main.o: main.c  string_func.h
+main.o: main.c
 	$(CC) $(FLAGS) -c main.c 
 
 
@@ -16,3 +16,5 @@ main.o: main.c  string_func.h
 
 clean:
 	rm -f *.o *.a *.so Program
+	
+	
