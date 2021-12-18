@@ -8,7 +8,7 @@ all: stringProg
 stringProg: $(OBJECTS_MAIN) 
 	$(CC) $(FLAGS) -o stringProg $(OBJECTS_MAIN) 
 
-main.o: main.c
+ $(OBJECTS_MAIN): main.c
 	$(CC) $(FLAGS) -c main.c 
 
 
