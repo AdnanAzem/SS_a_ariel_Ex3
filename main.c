@@ -11,6 +11,7 @@ char txt[TXT];
 
 // Q1
 void writeWord(){
+    /*
     char c = 0;
     scanf("%c", &c);
     int i = 0;
@@ -19,9 +20,17 @@ void writeWord(){
         scanf("%c", &c);
     }
     word[i] = '\0';
+    */
+   	int i = 0;
+	do {
+		scanf("%c", &word[i]);
+		i++;
+	} while ((word[i - 1] != ' ') && (word[i-1]!='\t') && (word[i-1]!='\n'));
+	word[i++]='\0';
 }
 
 void writeTxt(){
+    /*
     char c = 0;
     scanf("%c", &c);
     int i;
@@ -30,6 +39,13 @@ void writeTxt(){
         scanf("%c", &c);
     }
     txt[i] = '\0';
+    */
+   	int j = 0;
+	do {
+		scanf("%c", &text[j]);
+		j++;
+	} while (text[j - 1] != '~');
+	text[j++] = '\0';
 }
 
 int CharToNum(char c){
@@ -53,7 +69,8 @@ int CalcWord(char *c){
         int s = CharToNum(c[i]);
         ans = ans+s;
     }
-    return ans; 
+    return ans;
+    
 }
 
 int GematriaWord(){
@@ -186,7 +203,8 @@ void AtbashSentence(){
                     count--;
                 }
                 checkToPrint++;
-            }  
+            }
+            
         }
         else if(txt[i] == revAtbash[0]){
              int count=check(i,revAtbash,txt);
@@ -286,7 +304,6 @@ void AnagramSentence(){
             }
         }
     }
-    printf("\n");
 }
 
 
@@ -299,4 +316,3 @@ int main()
     AnagramSentence();
     return 0;
 }
-
