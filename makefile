@@ -3,10 +3,10 @@ AR=ar
 FLAGS= -Wall -g 
 OBJECTS_MAIN=main.o
 
-all: Program
+all: stringProg
 
-Program: $(OBJECTS_MAIN) 
-	$(CC) $(FLAGS) -o Program $(OBJECTS_MAIN) 
+stringProg: $(OBJECTS_MAIN) 
+	$(CC) $(FLAGS) -o stringProg $(OBJECTS_MAIN) 
 
 main.o: main.c
 	$(CC) $(FLAGS) -c main.c 
@@ -15,6 +15,6 @@ main.o: main.c
 .PHONY: clean all
 
 clean:
-	rm -f *.o *.a *.so Program
-	
+	rm -f *.o *.a *.so stringProg
+
 	
