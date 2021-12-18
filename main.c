@@ -20,14 +20,6 @@ void writeWord(){
         scanf("%c", &c);
     }
     word[i] = '\0';
-    /*
-   	int i = 0;
-	do {
-		scanf("%c", &word[i]);
-		i++;
-	} while ((word[i - 1] != ' ') && (word[i-1]!='\t') && (word[i-1]!='\n'));
-	word[i++]='\0';
-	*/
 }
 
 void writeTxt(){
@@ -40,14 +32,6 @@ void writeTxt(){
         scanf("%c", &c);
     }
     txt[i] = '\0';
-    /*
-   	int j = 0;
-	do {
-		scanf("%c", &text[j]);
-		j++;
-	} while (text[j - 1] != '~');
-	text[j++] = '\0';
-	*/
 }
 
 int CharToNum(char c){
